@@ -9,7 +9,7 @@ puts "ooh. are you sure? okay..."
 
 if second_year <= first_year
   puts "looks like the ending year you provided comes before the starting year."
-	puts "are you sure you understood the question?"
+  puts "are you sure you understood the question?"
 end
 
 range = []
@@ -23,9 +23,9 @@ puts "these years are leap years:"
 # figure out how to return "there are no leap years" if the range doesn't have any leap years in it
 
 range.each do |years|
-	if years.to_i % 4 == 0
-		if !(years.to_i % 100 == 0) || years.to_i % 400 == 0
-		puts "#{years}"
-		end
-	end
+  if years.to_i % 4 == 0
+    if !(years.to_i % 100 == 0) || years.to_i % 400 == 0
+	puts "#{years}"
+    end
+  end
 end
