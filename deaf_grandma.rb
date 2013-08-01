@@ -6,7 +6,7 @@ response = gets.chomp
 byes = 0
 
 while response != response.upcase
-  puts "HUH?! SPEAK UP, SONNY"
+	puts "HUH?! SPEAK UP, SONNY"
 	response = gets.chomp
 
 	while response == response.upcase
@@ -14,14 +14,16 @@ while response != response.upcase
 		response = gets.chomp
 		#break if response == "BYE"
 
-	if response == "BYE"
-		byes = byes + 1
-	else
-		byes = 0
-	end
-		puts "#{byes}"
-	break if byes >= 3
-	end
+		if response == "BYE"
+			byes = byes + 1
+			puts "#{byes}"
+		else
+			byes = 0
+		end
 
-	puts "BYE-BYE SONNY"
+		if byes >= 3
+			puts "BYE-BYE SONNY"
+			break 
+		end
+	end
 end
